@@ -2,25 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pardot Visitor & Form Test</title>
-  <!-- PARDOT TRACKING CODE -->
-  <script type="text/javascript">
+  <title>Pardot Visitor &amp; Form Test</title>
+  <!-- PARDOT TRACKING -->
+  <script>
     piAId = '1043723';
-    piCId = '310998';  // Campaign ID from your form setup
+    piCId = '310998';
     piHostname = 'go.demo.pardot.com';
     (function() {
-      function async_load() {
-        var s = document.createElement('script');
+      function async_load(){
+        var s = document.createElement('script'); 
         s.type = 'text/javascript';
-        s.src = (document.location.protocol === 'https:' ? 'https://' : 'http://') + piHostname + '/pd.js';
+        s.src = (location.protocol==='https:'?'https://':'http://')
+               +piHostname+'/pd.js';
         var c = document.getElementsByTagName('script')[0];
         c.parentNode.insertBefore(s, c);
       }
-      if (window.attachEvent) {
-        window.attachEvent('onload', async_load);
-      } else {
-        window.addEventListener('load', async_load, false);
-      }
+      if (window.attachEvent) window.attachEvent('onload', async_load);
+      else window.addEventListener('load', async_load, false);
     })();
   </script>
 </head>
@@ -28,21 +26,22 @@
   <h1>Welcome to My Test Page</h1>
   <p>Click around to simulate visits.</p>
 
-  <!-- PARDOT FORM HANDLER: merges visitor into Prospect -->
+  <!-- PARDOT FORM HANDLER -->
   <form
     id="pardot-form"
-    action="https://go.demo.pardot.com/l/1042723/2025-06-11/3bwg77"
-    method="post"
+    action="https://go.demo.pardot.com/l/1043723/2025-06-11/3bwg77"
+    method="POST"
+    style="margin:2em 0;"
   >
-    <label for="first_name">First Name:</label>
-    <input type="text" id="first_name" name="first_name" required>
-    <br>
-    <label for="last_name">Last Name:</label>
-    <input type="text" id="last_name" name="last_name" required>
-    <br>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
-    <br>
+    <label for="first_name">First Name:</label><br>
+    <input type="text" id="first_name" name="first_name" required><br><br>
+
+    <label for="last_name">Last Name:</label><br>
+    <input type="text" id="last_name" name="last_name" required><br><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
     <button type="submit">Submit</button>
   </form>
 
