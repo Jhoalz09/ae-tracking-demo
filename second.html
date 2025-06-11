@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <title>Second Pardot Test Page</title>
   <!-- PARDOT TRACKING CODE -->
-  <script type='text/javascript'>
-    piAId = '1043723';
-    piCId = '';
-    piHostname = 'go.demo.pardot.com';
+<script type='text/javascript'>
+piAId = '1043723';
+piCId = '310998';
+piHostname = 'go.demo.pardot.com';
 
-    (function() {
-      function async_load(){
-        var s = document.createElement('script'); s.type = 'text/javascript';
-        s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
-        var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
-      }
-      if(window.attachEvent) { window.attachEvent('onload', async_load); }
-      else { window.addEventListener('load', async_load, false); }
-    })();
-  </script>
+(function() {
+	function async_load(){
+		var s = document.createElement('script'); s.type = 'text/javascript';
+		s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
+		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+	}
+	if(window.attachEvent) { window.attachEvent('onload', async_load); }
+	else { window.addEventListener('load', async_load, false); }
+})();
+</script>
 </head>
 <body>
   <h1>This is Page 2</h1>
