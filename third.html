@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Embedded Form</title>
+  <title>Welcome to Our Page</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,10 +16,15 @@
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
   </style>
 </head>
 <body>
   <div class="form-container">
+    <h1>Welcome! We'd love to hear from you.</h1>
     <iframe 
       src="https://go.demo.pardot.com/l/1042723/2025-06-11/3bwg74"
       width="100%" 
@@ -30,5 +35,22 @@
       style="border: 0;">
     </iframe>
   </div>
+
+  <!-- Pardot Tracking Code -->
+  <script type="text/javascript">
+    piAId = '1043723';
+    piCId = '310998';
+    piHostname = 'go.demo.pardot.com';
+
+    (function() {
+      function async_load(){
+        var s = document.createElement('script'); s.type = 'text/javascript';
+        s.src = (document.location.protocol === 'https:' ? 'https://' : 'http://') + piHostname + '/pd.js';
+        var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+      }
+      if(window.attachEvent) { window.attachEvent('onload', async_load); }
+      else { window.addEventListener('load', async_load, false); }
+    })();
+  </script>
 </body>
 </html>
